@@ -5,7 +5,7 @@ For initial setup and project (docker) start, run
 ```
 make config
 make docker-up
-make composer
+make init
 ```
 
 To create and start docker containers, run
