@@ -1,4 +1,4 @@
-To run application, you must have docker and docker-compose install
+To run application, you must have docker and docker-compose installed
 
 For initial setup and project (docker) start, run
 
