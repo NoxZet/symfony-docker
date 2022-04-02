@@ -1,4 +1,5 @@
 FROM php:8.1.4-apache
+RUN docker-php-ext-install pdo_mysql
 
 RUN apt-get -y update
 RUN apt-get -y install git
