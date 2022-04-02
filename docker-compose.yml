@@ -18,3 +18,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     user: "${UID}"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
