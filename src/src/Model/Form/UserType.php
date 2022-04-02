@@ -15,7 +15,7 @@ class UserType extends AbstractType
 		$builder
 			->add('firstName', TextType::class)
 			->add('lastName', TextType::class)
-			->add('email', TextType::class)
+			->add('phone', TextType::class)
 			->add('insert', SubmitType::class, [
 				'label' => 'Vložit',
 			]);

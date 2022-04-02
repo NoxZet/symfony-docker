@@ -6,7 +6,7 @@ class User
 {
 	protected ?string $firstName;
 	protected ?string $lastName;
-	protected ?string $email;
+	protected ?string $phone;
 
 	/**
 	 * @return string|null
@@ -17,9 +17,11 @@ class User
 
 	/**
 	 * @param string|null $firstName
+	 * @return $this
 	 */
-	public function setFirstName(?string $firstName): void {
+	public function setFirstName(?string $firstName): self {
 		$this->firstName = $firstName;
+		return $this;
 	}
 
 	/**
@@ -31,22 +33,26 @@ class User
 
 	/**
 	 * @param string|null $lastName
+	 * @return $this
 	 */
-	public function setLastName(?string $lastName): void {
+	public function setLastName(?string $lastName): self {
 		$this->lastName = $lastName;
+		return $this;
 	}
 
 	/**
 	 * @return string|null
 	 */
-	public function getEmail(): ?string {
-		return $this->email;
+	public function getPhone(): ?string {
+		return $this->phone;
 	}
 
 	/**
-	 * @param string|null $email
+	 * @param string|null $phone
+	 * @return $this
 	 */
-	public function setEmail(?string $email): void {
-		$this->email = $email;
+	public function setPhone(?string $phone): self {
+		$this->phone = $phone;
+		return $this;
 	}
 }
