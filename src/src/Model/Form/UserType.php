@@ -13,12 +13,10 @@ class UserType extends AbstractType
 {
 	public function buildForm(FormBuilderInterface $builder, array $options): void {
 		$builder
-			->add('firstName', TextType::class)
-			->add('lastName', TextType::class)
-			->add('phone', TextType::class)
-			->add('insert', SubmitType::class, [
-				'label' => 'Vložit',
-			]);
+			->add('firstName', TextType::class, ['label' => 'Jméno'])
+			->add('lastName', TextType::class, ['label' => 'Příjmení'])
+			->add('phone', TextType::class, ['label' => 'Telefon'])
+			->add('insert', SubmitType::class, ['label' => 'Vložit']);
 	}
 
 	public function configureOptions(OptionsResolver $resolver) {
