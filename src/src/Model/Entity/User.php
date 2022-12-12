@@ -14,19 +14,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 	#[ORM\GeneratedValue]
 	private ?int $id;
 
-	#[ORM\Column(type: 'string', length: 255, nullable: false)]
+	#[ORM\Column(type: 'string', length: 255, nullable: false, unique: true)]
 	protected string $email;
 
 	#[ORM\Column(type: 'string', length: 255, nullable: false)]
 	protected string $password;
 
-	#[ORM\Column(type: 'string', length: 255)]
+	#[ORM\Column(type: 'string', length: 255, nullable: true)]
 	protected ?string $firstName;
 
-	#[ORM\Column(type: 'string', length: 255)]
+	#[ORM\Column(type: 'string', length: 255, nullable: true)]
 	protected ?string $lastName;
 
-	#[ORM\Column(type: 'string', length: 255)]
+	#[ORM\Column(type: 'string', length: 255, nullable: true)]
 	protected ?string $phone;
 
 	public function getId(): ?int {

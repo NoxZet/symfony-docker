@@ -14,15 +14,7 @@ class MainController extends AbstractController
 {
 	#[Route('/')]
 	public function main(Request $request, UserStorage $userStorage): Response {
-		$user = new User();
-		$form = $this->createForm(UserType::class, $user);
-		$form->handleRequest($request);
-		if ($form->isSubmitted() && $form->isValid()) {
-			$userStorage->save($user);
-		}
 		return $this->render('Main/main.html.twig', [
-			'form' => $form->createView(),
-			'users' => $userStorage->fetchAll(),
 		]);
 	}
 }
